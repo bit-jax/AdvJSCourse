@@ -4,7 +4,7 @@ fs.readdir(process.argv[2], function (err, data){
     if (err) {
         console.log(err)
     }
-    const groups = data.filter(file => file.endsWith(process.argv[3])
+    const groups = data.filter(file => file.endsWith('.' + process.argv[3])
     )
     // console.log(groups)
     groups.forEach(element => {
