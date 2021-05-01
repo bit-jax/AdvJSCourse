@@ -1,0 +1,25 @@
+{
+  "name": "static-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx tape test.js | npx tap-spec",
+    "watch-server": "npx nodemon index.js",
+    "watch-client": "npx watchify client/main.js -o static/bundle.js --debug --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.0"
+  },
+  "dependencies": {
+    "http-hash-router": "^2.0.1",
+    "st": "^2.0.0",
+    "watchify": "^3.11.1",
+    "yo-yo": "^1.4.1"
+  }
+}

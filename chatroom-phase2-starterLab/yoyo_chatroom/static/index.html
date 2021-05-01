@@ -1,0 +1,33 @@
+ <!-- http://localhost:8000/messages -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <title>Chat Room</title>
+</head>
+<body>
+  <h1>Chat Room</h1>
+  <p id='username'>Username</p>
+  <input id='nameValue' type="text" placeholder="Please Enter Your Name">
+
+  <div class='contentContainer'>
+    <div id='roomBtnContainer'>
+      <button id='room1' class='room'>Room 1</button>
+      <button id='room2' class='room'>Room 2</button>
+      <button id='newRoomBtn' class='room'>Add new Room</button>
+    </div>
+
+
+    <div id='chatHistory'></div>
+    <div id="msgAndBtn">
+      <input id='postValue' type="textarea" placeholder="Write Message Here ">
+      <button id='postBtn' type="button">Enter</button>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>

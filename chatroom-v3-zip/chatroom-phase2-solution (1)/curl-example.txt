@@ -1,0 +1,4 @@
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"text":"hello","nick":"dude","date":"2020-05-19T04:18:49.841Z"}' \
+  http://localhost:8000/messages

@@ -1,0 +1,62 @@
+* {
+    text-align: center;
+
+}
+
+#nameValue{
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+#username{
+    margin: 0 auto
+}
+
+.contentContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#roomBtnContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#chatHistory {
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#chatHistory ul {
+    color: red;
+    list-style-type: none;
+    width: 90%;
+}
+
+#chatHistory li {
+    text-align: left;
+}
+
+#msgAndBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#postValue{
+    width: 333px;
+    height: 50px;
+    overflow: scroll;
+}
+
+#postBtn{
+    width: 60px; 
+}
