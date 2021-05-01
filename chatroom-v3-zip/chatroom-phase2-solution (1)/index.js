@@ -32,17 +32,16 @@ app.post('/messages', function (request, response) {
           response.statusCode = 500
           return response.end(err)
         }
-        
         response.end('Message posted successfully')
       })
 })
 
-
-// //Static files
-// app.use(express.static('static'))
-
-
-
+io.on('connection', (socket) => {
+    console.log('user connected')
+    socket.on('chat message', (msg) => {
+        io.emit('chat message', msg);
+    })
+})
 
 //Server is listening
 server.listen(port, () => {

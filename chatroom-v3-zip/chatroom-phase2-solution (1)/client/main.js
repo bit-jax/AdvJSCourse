@@ -3,6 +3,7 @@ const { getMessages, postMessage } = require('./fetch-messages')
 const { Chat } = require('./components')
 const yo = require('yo-yo')
 
+const io = require('../node_modules/socket.io/client-dist/socket.io.js')
 const nickname = prompt('Enter your nickname:')
 
 const sendForm = document.getElementById('send-message')
@@ -11,6 +12,19 @@ sendForm.onsubmit = evt => {
   evt.preventDefault()
   postMessage(messageTextField.value, nickname, state.room)
 }
+
+var socket =  io()
+
+var form = document.getElementById('send-message');
+var input = document.getElementById('message-text');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (input.value) {
+    socket.emit('chat message', input.value);
+    input.value = '';
+  }
+})
 
 const state = {
   room: '',
@@ -26,4 +40,9 @@ const el = Chat(state.messages, state.room, updateState)
 const chatContainer = document.getElementById('chat-container')
 chatContainer.appendChild(el)
 
-setInterval(() => getMessages(updateState), 1000)
+// get messages on page load. runs again on chat message event
+getMessages(updateState)
+
+socket.on('chat message', function(msg) {
+  getMessages(updateState)
+});

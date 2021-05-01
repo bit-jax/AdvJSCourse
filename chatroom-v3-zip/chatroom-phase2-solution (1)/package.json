@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "http-hash-router": "^2.0.1",
+    "jasmine": "^3.7.0",
     "socket.io": "^4.0.1",
     "st": "^2.0.0",
     "watchify": "^3.11.1",
