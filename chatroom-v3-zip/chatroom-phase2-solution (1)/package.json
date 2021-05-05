@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx tape test.js | npx tap-spec",
+    "test": "jasmine",
     "watch-server": "npx nodemon index.js",
     "watch-client": "npx watchify client/main.js -o static/bundle.js --debug --verbose"
   },
